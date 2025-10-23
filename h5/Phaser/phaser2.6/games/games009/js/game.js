@@ -119,7 +119,7 @@ var game =new Phaser.Game(width, height, Phaser.CANVAS, 'game');
 
 /**************************** 傳入資料庫方法 **********************/ 
 
-// 回傳遊戲分數與有無扣點(淑貞看這)
+// 回傳遊戲分數與有無扣點(資料看這)
 function sendScore(SCORE,POINTCOSTFLAG,FREECOUNTCOSTFLAG){
 
     $(function () {
@@ -147,7 +147,7 @@ function sendScore(SCORE,POINTCOSTFLAG,FREECOUNTCOSTFLAG){
     }); 
 }
 
-// 回傳會員目前點數(淑貞看這)
+// 回傳會員目前點數(資料看這)
 function sendPonit(POINT){
 
     $(function () {
@@ -171,7 +171,7 @@ function sendPonit(POINT){
     }); 
 }
 
-// 回傳會員目前免費次數(淑貞看這)
+// 回傳會員目前免費次數(資料看這)
 function sendfreeCount(COUNT){
 
     $(function () {
@@ -493,7 +493,7 @@ game.State.start={
         phpsuccess = false;
 
     /********************* 取得資料庫設定數值 *********************/
-    // (淑貞看這)
+    // (資料看這)
 
         $(function () {
             $.ajax({
@@ -595,7 +595,7 @@ game.State.start={
             }catch(e){} 
             var tween = game.add.tween(game.startBtn).to({ alpha: 0 }, 300, Phaser.Easing.Linear.None, true, 0, 0, false);
             tween.onComplete.add(function(){
-                // 判斷有無連結資料庫(淑貞看這)
+                // 判斷有無連結資料庫(資料看這)
                 if(phpsuccess){
                     // 會員點數相關 state
                     game.state.start('cost');                
@@ -607,7 +607,7 @@ game.State.start={
         }    
     },
 }
-// 點數花費(淑貞看這請創建相關資料庫)
+// 點數花費(資料看這請創建相關資料庫)
 game.State.cost={
 
     create: function(){
