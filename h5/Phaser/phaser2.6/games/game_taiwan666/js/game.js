@@ -197,7 +197,7 @@ game.State.load = {
         game.load.image('title', '../game_taiwan666/assets/title.jpg');
         game.load.image('loss', '../game_taiwan666/assets/loss.jpg');
         game.load.image('loss_text', '../game_taiwan666/assets/loss_text.png');
-        // game.load.image('ending', '../game_taiwan666/assets/ending.jpg');
+        game.load.image('ending', '../game_taiwan666/assets/ending.jpg');
         game.load.spritesheet('player', '../game_taiwan666/assets/player.png', 105, 110, 13);
         game.load.spritesheet('avatar', '../game_taiwan666/assets/avatar.png', 100, 100, 2);
         game.load.spritesheet('icons', '../game_taiwan666/assets/icons.png', 80, 50, 8);
@@ -477,8 +477,7 @@ game.State.play = {
                 lifeText.setText(this.player.life > 0 ? this.player.life : 0);
             }
         } else if (keyboard.end.isDown) {
-            // this.showEnding();
-            game.state.start('start');
+            this.showEnding();
         }
     },
 
