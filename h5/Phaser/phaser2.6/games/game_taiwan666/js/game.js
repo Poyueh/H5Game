@@ -202,7 +202,7 @@ game.State.load = {
         game.load.spritesheet('avatar', '../game_taiwan666/assets/avatar.png', 100, 100, 2);
         game.load.spritesheet('icons', '../game_taiwan666/assets/icons.png', 80, 50, 8);
         game.load.spritesheet('startBtn', '../game_taiwan666/assets/startBtn.png', 278, 100, 1);
-        game.load.spritesheet('urlBtn', '../game_taiwan666/assets/urlBtn.png', 150, 150, 2);
+        // game.load.spritesheet('urlBtn', '../game_taiwan666/assets/urlBtn.png', 150, 150, 2);
         game.load.spritesheet('explode', '../game_taiwan666/assets/explode.png', 80, 80, 3);
         game.load.image('twig', '../game_taiwan666/assets/twig.png');
         game.load.image('light', '../game_taiwan666/assets/light.png');
@@ -250,14 +250,14 @@ game.State.start = {
         this.startBtn = game.add.sprite(game.width / 2, game.height / 2 + 100, 'startBtn');
         this.startBtn.alpha = 0;
         this.startBtn.anchor.setTo(0.5, 0.5);
-        this.urlBtn = game.add.button(10, 10, 'urlBtn', function () {
-            window.open('https://www.youtube.com/channel/UC9wo_WgYUgCZOJIZ-hD5-mA?view_as=subscriber', '_blank');
-        }, this, 1, 0, 1,0);
-        this.urlBtn.alpha = 0;
-        this.urlBtn.inputEnabled = false;
-        game.add.tween(this.urlBtn).to({alpha: 1}, 1000, Phaser.Easing.Linear.None, true, 0, 0, false).onComplete.addOnce(() => {
-            this.urlBtn.inputEnabled = true;
-        });
+        // this.urlBtn = game.add.button(10, 10, 'urlBtn', function () {
+        //     window.open('https://www.youtube.com/channel/UC9wo_WgYUgCZOJIZ-hD5-mA?view_as=subscriber', '_blank');
+        // }, this, 1, 0, 1,0);
+        // this.urlBtn.alpha = 0;
+        // this.urlBtn.inputEnabled = false;
+        // game.add.tween(this.urlBtn).to({alpha: 1}, 1000, Phaser.Easing.Linear.None, true, 0, 0, false).onComplete.addOnce(() => {
+        //     this.urlBtn.inputEnabled = true;
+        // });
         var tween = game.add.tween(this.startBtn).to({alpha: 1}, 1000, Phaser.Easing.Linear.None, true, 0, 0, false);
         tween.onComplete.addOnce(function () {
             this.startBtn.inputEnabled = true;
